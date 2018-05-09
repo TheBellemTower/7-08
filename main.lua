@@ -10,7 +10,7 @@ local physics = require( "physics" )
 
 physics.start()
 physics.setGravity( 0, 25 ) -- ( x, y )
-physics.setDrawMode( "hybrid" )   -- Shows collision engine outlines only
+--physics.setDrawMode( "hybrid" )   -- Shows collision engine outlines only
 
 local playerBullets = {} -- Table that holds the players Bullets
 
@@ -25,7 +25,15 @@ physics.addBody( theGround, "static", {
 
 local fight = display.newText( "Fight", 1000, 200, native.systemFont, 350)
 fight.alpha = .5
-fight:setTextColor( .7, 0, 0)
+fight:setTextColor( 1, 0, 0)
+
+local shoot = display.newText( "shoot", 1800, 1450, native.systemFont, 25)
+fight.alpha = .5
+fight:setTextColor( 1,1,0)
+
+local jumps = display.newText( "jump", 1960, 1450, native.systemFont, 25)
+fight.alpha = .5
+fight:setTextColor( 1,1,0)
 
 local Ground = display.newImage( "./assets/sprites/land.png" )
 Ground.x = display.contentCenterX + 900
